@@ -1,0 +1,162 @@
+.crypto-bg {
+  animation: colorChange 10s infinite alternate;
+  padding: 10px;
+  background: rgba(128, 128, 128, 0.651);
+}
+@keyframes colorChange {
+  from {
+    background-color: rgba(128, 128, 128, 0.32); /* Green */
+  }
+  to {
+    background-color: black; /* Red */
+  }
+}
+
+/* cryptoStyles.css */
+
+.text-center {
+  text-align: center;
+  color: #fff;
+}
+
+.chart-container {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.chart-options {
+  display: flex;
+  justify-content: center;
+}
+
+.link-button {
+  background: lightblue;
+  color: #000;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.crypto-card {
+  background: #666666;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.crypto-icon {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.flex-main {
+  display: flex;
+}
+.main-div {
+  display: flex;
+  justify-content: space-between;
+}
+.crypto-name {
+  color: #fff;
+  align-self: center;
+  padding-left: 10px;
+}
+
+.crypto-value {
+  color: #fff;
+  font-size: 12px;
+}
+
+.net-change-label {
+  color: #fff;
+  font-size: 12px;
+}
+
+.net-change-value {
+  color: #fff;
+}
+
+.red-text {
+  color: red;
+}
+
+.green-text {
+  color: #00a300;
+}
+.listing {
+  height: 100vh;
+  overflow-y: auto;
+  margin-top: 10px;
+  overflow-x: hidden;
+}
+
+/* conver page  */
+/* styles.css */
+
+.container {
+  background: #000;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.converter-box {
+  background: #000;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: auto;
+  border: 1px solid grey;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.select-box {
+  margin-bottom: 15px;
+}
+
+.select-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.select-input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  background: #333;
+  color: #fff;
+}
+
+.amount-input {
+  width: 95%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  background: #333;
+  color: #fff;
+}
+
+.convert-button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.converted-amount {
+  margin-top: 15px;
+  text-align: center;
+}
