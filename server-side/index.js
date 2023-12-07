@@ -1,5 +1,8 @@
-const express = require("express");
-const axios = require("axios");
+import dotenv from 'dotenv';
+dotenv.config();
+const { API, API_KEY } = process.env;
+import express from "express";
+import axios from "axios";
 
 const app = express();
 const port = 4000;
@@ -19,7 +22,7 @@ app.use((req, res, next) => {
 app.get("/list", async (req, res) => {
   try {
     const response = await axios.get(
-      `https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?&start=1&convert=INR&CMC_PRO_API_KEY=dfadb850-58ca-433a-abba-e0468c959fef`
+      `${API}/cryptocurrency/listings/latest?&start=1&convert=INR&CMC_PRO_API_KEY=${API_KEY}`
     );
     res.json(response.data);
   } catch (error) {
@@ -30,7 +33,7 @@ app.get("/convert", async (req, res) => {
   try {
     const { amount, symbol, convert } = req.query;
     const response = await axios.get(
-      `https://pro-api.coinmarketcap.com/v1/tools/price-conversion?&amount=${amount}&symbol=${symbol}&convert=${convert}&CMC_PRO_API_KEY=dfadb850-58ca-433a-abba-e0468c959fef`
+      `${API}/tools/price-conversion?&amount=${amount}&symbol=${symbol}&convert=${convert}&CMC_PRO_API_KEY=${API_KEY}`
     );
     res.json(response.data);
   } catch (error) {
